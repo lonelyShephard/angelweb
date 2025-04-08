@@ -3,11 +3,16 @@ from datetime import datetime
 from smartapi.login import login
 from logzero import logger
 from flask import session
+import os
+
+# Set the path for the angelweb directory
+ANGELWEB_PATH = r"C:\Users\user\projects\angelweb"
 
 # Load stock symbols from stocks.json
 def load_stocks(json_file):
+    json_path = os.path.join(ANGELWEB_PATH, json_file)
     try:
-        with open(json_file, "r") as file:
+        with open(json_path, "r") as file:
             data = json.load(file)
         return {entry["symbol"]: {"token": entry["token"], "exchange": entry["exchange"]} for entry in data}
     except Exception as e:
@@ -35,26 +40,19 @@ def fetch_ltp(exchange, symbol, token):
             return "Failed to fetch LTP data."
 
 # Fetch Historical Data
-def fetch_historical_data(symbol, token, exchange, interval, from_date, to_date, from_time, to_time):
+def fetch_historical_data(symbol, token, exchange, interval, from_datetime, to_datetime, from_time, to_time):
     smart_api, auth_token, refresh_token = login()
     if smart_api is None:
         logger.error("Login Failed: Unable to login.")
         return "Unable to login."
     try:
-        # Build complete datetime strings using the provided time inputs.
-        from_date_str = from_date + f" {from_time}"
-        to_date_str   = to_date   + f" {to_time}"
-        
-        # Debug prints for verification.
-        print(f"Final fromdate: {from_date_str}")
-        print(f"Final todate: {to_date_str}")
         
         historic_params = {
             "exchange": exchange.strip(),
             "symboltoken": token.strip(),  # Token loaded from stocks.json
             "interval": interval.strip().upper(),
-            "fromdate": from_date_str,
-            "todate": to_date_str
+            "fromdate": from_datetime,
+            "todate": to_datetime
         }
         logger.info(f"📡 Sending Historical Data Request: {historic_params}")
         
