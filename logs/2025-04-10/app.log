@@ -1,0 +1,172 @@
+[E 250410 05:57:52 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250410 06:23:35 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250410 06:23:39 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250410 20:40:37 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': '3c:97:0e:8b:18:a0', 'Accept': 'application/json', 'X-PrivateKey': 'VplNyJAX', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Ikg1Mzc0OTkyOSIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeVgzUjVjR1VpT2lKamJHbGxiblFpTENKMGIydGxibDkwZVhCbElqb2lkSEpoWkdWZllXTmpaWE56WDNSdmEyVnVJaXdpWjIxZmFXUWlPakV5TENKemIzVnlZMlVpT2lJeklpd2laR1YyYVdObFgybGtJam9pWkdGbU1ESTNZbU10T1dNME1DMHpNamN6TFRneFl6a3RNamRtT0dVek0ySTROVGcySWl3aWEybGtJam9pZEhKaFpHVmZhMlY1WDNZeUlpd2liMjF1WlcxaGJtRm5aWEpwWkNJNk1USXNJbkJ5YjJSMVkzUnpJanA3SW1SbGJXRjBJanA3SW5OMFlYUjFjeUk2SW1GamRHbDJaU0o5TENKdFppSTZleUp6ZEdGMGRYTWlPaUpoWTNScGRtVWlmWDBzSW1semN5STZJblJ5WVdSbFgyeHZaMmx1WDNObGNuWnBZMlVpTENKemRXSWlPaUpJTlRNM05EazVNamtpTENKbGVIQWlPakUzTkRRek9EUXlNamtzSW01aVppSTZNVGMwTkRJNU56WTBPU3dpYVdGMElqb3hOelEwTWprM05qUTVMQ0pxZEdraU9pSmxNamM0WVRZMFl5MDBaREppTFRRMFl6Y3RZVGMwTnkxbFpXTmpZemszT0RJME1qSWlMQ0pVYjJ0bGJpSTZJaUo5Lmoyc0E2T00ybHk1R0VCa1JNdGZpa3lPOWQyTWYwUG1qejhXZ3RBVDQ4Q05UVXVzNHp3QzFaczIwaW9jTXVwQmFXaV9ySHJSVEZQdUFfTGZYWTctUEJhc1YyMkJiQjlTMVBoZm0wWEZHbHlBbGE2RHJvelg1YTByeHhab3RyZmJHZWN0dnUzeVI0SFo1T2lscWtqOUlVWnplckFJUk1kMU1CdTNkQ1pIb1dQYyIsIkFQSS1LRVkiOiJWcGxOeUpBWCIsImlhdCI6MTc0NDI5NzgyOSwiZXhwIjoxNzQ0Mzg0MjI5fQ.YaaCcFWKG_EIG53F_iz4IYvugMGktJCFAEBGxBH045g4qe3CZt05Qagrq_swlvBox5bp7u9qh8zy7r4IXEvKLQ'}, Request: {'exchange': 'NSE', 'symboltoken': '11343', 'interval': 'ONE_DAY', 'fromdate': '2024-09-01 00:00', 'todate': '2025-04-10 23:59'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000025510FF3A90>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 250410 20:40:37 fetch_data_core:65] Historical Data fetch failed: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000025510FF3A90>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+        sock = connection.create_connection(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+        raise err
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+        sock.connect(sa)
+    TimeoutError: timed out
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+        response = self._make_request(
+                   ^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+        raise new_e
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+        self._validate_conn(conn)
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+        conn.connect()
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 704, in connect
+        self.sock = sock = self._new_conn()
+                           ^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 207, in _new_conn
+        raise ConnectTimeoutError(
+    urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x0000025510FF3A90>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)')
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+               ^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+        retries = retries.increment(
+                  ^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000025510FF3A90>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\smartapi\fetch_data_core.py", line 60, in fetch_historical_data
+        historical_data = smart_api.getCandleData(historic_params)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\adapters.py", line 688, in send
+        raise ConnectTimeout(e, request=request)
+    requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000025510FF3A90>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 250410 20:43:33 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': '3c:97:0e:8b:18:a0', 'Accept': 'application/json', 'X-PrivateKey': 'VplNyJAX', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Ikg1Mzc0OTkyOSIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeVgzUjVjR1VpT2lKamJHbGxiblFpTENKMGIydGxibDkwZVhCbElqb2lkSEpoWkdWZllXTmpaWE56WDNSdmEyVnVJaXdpWjIxZmFXUWlPakV5TENKemIzVnlZMlVpT2lJeklpd2laR1YyYVdObFgybGtJam9pWkdGbU1ESTNZbU10T1dNME1DMHpNamN6TFRneFl6a3RNamRtT0dVek0ySTROVGcySWl3aWEybGtJam9pZEhKaFpHVmZhMlY1WDNZeUlpd2liMjF1WlcxaGJtRm5aWEpwWkNJNk1USXNJbkJ5YjJSMVkzUnpJanA3SW1SbGJXRjBJanA3SW5OMFlYUjFjeUk2SW1GamRHbDJaU0o5TENKdFppSTZleUp6ZEdGMGRYTWlPaUpoWTNScGRtVWlmWDBzSW1semN5STZJblJ5WVdSbFgyeHZaMmx1WDNObGNuWnBZMlVpTENKemRXSWlPaUpJTlRNM05EazVNamtpTENKbGVIQWlPakUzTkRRek9EUTBNRFVzSW01aVppSTZNVGMwTkRJNU56Z3lOU3dpYVdGMElqb3hOelEwTWprM09ESTFMQ0pxZEdraU9pSXpabUUxTWpoaFpDMHdOakZrTFRSaFpXUXRPREpqTXkweU9URTVOalEwWXpNeU1EUWlMQ0pVYjJ0bGJpSTZJaUo5LlZDWDFDTjFCc1BEVkxNSlV1SWJaRDZHRUFrQVFOQmVCMlJuQ1NJTVl1VFVVNkVJdjRkLXNZekd2WmZSeUo3QmVmQTRwc0Rtalp0WW14cDI4UXFwSWg1OGhHZEw1ekZIMm4xdnViREhKSjFCTi1CRmNZczNldE5kclMtTTdDcjhWcklHYW8yakNXTWVzem85anZnLUdwTWFiQXdJeG8yQV9KMG1NLVlVRUxHOCIsIkFQSS1LRVkiOiJWcGxOeUpBWCIsImlhdCI6MTc0NDI5ODAwNSwiZXhwIjoxNzQ0Mzg0NDA1fQ.8PGOuflLkjaoc3RqZdWv85Xep8XpqZdwzyIpD0F2vkz_KLDPliYdhB37XiS14Puv5MP33-T2mvlhu95vXuQ0WQ'}, Request: {'exchange': 'NSE', 'symboltoken': '11343', 'interval': 'ONE_DAY', 'fromdate': '2025-01-01 00:00', 'todate': '2025-04-10 23:59'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Read timed out. (read timeout=7)
+[E 250410 20:43:33 fetch_data_core:65] Historical Data fetch failed: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Read timed out. (read timeout=7)
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+        response = conn.getresponse()
+                   ^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+        httplib_response = super().getresponse()
+                           ^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+        response.begin()
+      File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+        version, status, reason = self._read_status()
+                                  ^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 286, in _read_status
+        line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+        return self._sock.recv_into(b)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1314, in recv_into
+        return self.read(nbytes, buffer)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 1166, in read
+        return self._sslobj.read(len, buffer)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    TimeoutError: The read operation timed out
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+               ^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+        retries = retries.increment(
+                  ^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+        raise reraise(type(error), error, _stacktrace)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+        raise value
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+        response = self._make_request(
+                   ^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+        self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+        raise ReadTimeoutError(
+    urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Read timed out. (read timeout=7)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\smartapi\fetch_data_core.py", line 60, in fetch_historical_data
+        historical_data = smart_api.getCandleData(historic_params)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\adapters.py", line 713, in send
+        raise ReadTimeout(e, request=request)
+    requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Read timed out. (read timeout=7)

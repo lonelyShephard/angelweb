@@ -1,14 +1,91 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add any other CSS frameworks if you use them -->
+</head>
+<body>
+    <h1>Place Trading Order</h1>
 
-{% block content %}
-<div class="container">
-    <h1>Trading</h1>
     {% if message %}
-    <p class="success">{{ message }}</p>
+        <div class="alert alert-success">{{ message }}</div>
     {% endif %}
-    <form method="POST">
-        <!-- Your trading form elements from place_order_core.py -->
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('trading') }}">
+        <!-- Symbol Lookup -->
+        <div>
+            <label for="symbol">Symbol:</label>
+            <input type="text" id="symbol" name="symbol" list="symbol-list" required autocomplete="off" value="{{ symbol or '' }}">
+            <datalist id="symbol-list">
+                <!-- Options will be populated by JavaScript -->
+            </datalist>
+            <!-- Hidden fields for token and exchange -->
+            <input type="hidden" id="token" name="token" value="{{ token or '' }}">
+            <input type="hidden" id="exchange" name="exchange" value="{{ exchange or '' }}">
+        </div>
+
+        <!-- Transaction Type -->
+        <div>
+            <label for="transaction">Transaction:</label>
+            <select id="transaction" name="transaction" required>
+                <option value="BUY" {% if transaction == 'BUY' %}selected{% endif %}>BUY</option>
+                <option value="SELL" {% if transaction == 'SELL' %}selected{% endif %}>SELL</option>
+            </select>
+        </div>
+
+        <!-- Order Type -->
+        <div>
+            <label for="order_type">Order Type:</label>
+            <select id="order_type" name="order_type" required>
+                <option value="MARKET" {% if order_type == 'MARKET' %}selected{% endif %}>MARKET</option>
+                <option value="LIMIT" {% if order_type == 'LIMIT' %}selected{% endif %}>LIMIT</option>
+                <option value="STOPLOSS_MARKET" {% if order_type == 'STOPLOSS_MARKET' %}selected{% endif %}>STOPLOSS_MARKET</option>
+                <option value="STOPLOSS_LIMIT" {% if order_type == 'STOPLOSS_LIMIT' %}selected{% endif %}>STOPLOSS_LIMIT</option>
+            </select>
+        </div>
+
+        <!-- Product Type -->
+        <div>
+            <label for="product_type">Product Type:</label>
+            <select id="product_type" name="product_type" required>
+                <option value="INTRADAY" {% if product_type == 'INTRADAY' %}selected{% endif %}>INTRADAY (MIS)</option>
+                <option value="DELIVERY" {% if product_type == 'DELIVERY' %}selected{% endif %}>DELIVERY (CNC)</option>
+                <option value="CARRYFORWARD" {% if product_type == 'CARRYFORWARD' %}selected{% endif %}>CARRYFORWARD (NRML)</option>
+                <option value="MARGIN" {% if product_type == 'MARGIN' %}selected{% endif %}>MARGIN (MTF)</option>
+                <!-- Add other product types if supported/needed -->
+            </select>
+        </div>
+
+        <!-- Quantity -->
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required value="{{ quantity or '' }}">
+        </div>
+
+        <!-- Price (Toggled by JS) -->
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" id="price" name="price" value="{{ price or '' }}"> <!-- JS will handle required/disabled -->
+        </div>
+
+        <!-- Trigger Price (Toggled by JS - Not used by current backend logic for basic orders) -->
+        <div>
+            <label for="trigger_price">Trigger Price:</label>
+            <input type="number" step="0.01" id="trigger_price" name="trigger_price" value="{{ trigger_price or '' }}"> <!-- JS will handle required/disabled -->
+        </div>
+
         <button type="submit">Place Order</button>
     </form>
-</div>
-{% endblock %}
+
+    <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+
+    <!-- Include the combined JavaScript file -->
+    <script src="{{ url_for('static', filename='trading.js') }}" defer></script>
+</body>
+</html>

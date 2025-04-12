@@ -1,0 +1,46 @@
+[E 250409 10:13:35 place_order_core:31] Invalid stock selection!
+[E 250409 13:53:39 app:228] Error during order placement:
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 152, in trading
+        result_from_api = place_order(
+                          ^^^^^^^^^^^^
+    TypeError: place_order() takes 8 positional arguments but 13 were given
+[E 250409 14:17:26 place_order_core:31] Invalid stock selection!
+[E 250409 19:46:42 place_order_core:31] Invalid stock selection!
+[E 250409 19:53:06 place_order_core:31] Invalid stock selection!
+[E 250409 21:21:30 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250409 21:21:35 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250409 21:21:37 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250409 21:21:41 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250409 21:21:43 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
+[E 250409 21:21:46 app:61] Error initializing SmartAPI from session: 'SmartConnect' object has no attribute 'set_access_token'
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\app.py", line 45, in get_smartapi_instance
+        smart_api.set_access_token(auth_token)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'SmartConnect' object has no attribute 'set_access_token'
