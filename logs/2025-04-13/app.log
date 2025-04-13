@@ -1,0 +1,81 @@
+[E 250413 12:06:09 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/order/v1/placeOrder. Error: The order cannot be processed as the token is categorised under cautionary listings by the exchange.. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/order/v1/placeOrder, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': '3c:97:0e:8b:18:a0', 'Accept': 'application/json', 'X-PrivateKey': 'VplNyJAX', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'variety': 'NORMAL', 'tradingsymbol': 'BOMDYEING-EQ', 'symboltoken': '513', 'transactiontype': 'BUY', 'exchange': 'NSE', 'ordertype': 'MARKET', 'producttype': 'DELIVERY', 'duration': 'DAY', 'price': '0', 'squareoff': '0', 'stoploss': '0', 'quantity': '1'}, Response: {'message': 'The order cannot be processed as the token is categorised under cautionary listings by the exchange.', 'errorcode': 'AB4036', 'status': False, 'data': None}
+[E 250413 12:06:09 smartConnect:339] API request failed: {'message': 'The order cannot be processed as the token is categorised under cautionary listings by the exchange.', 'errorcode': 'AB4036', 'status': False, 'data': None}
+[E 250413 12:06:09 app:166] Order placement failed. API did not return an Order ID or indicated failure. Params: {'variety': 'NORMAL', 'tradingsymbol': 'BOMDYEING-EQ', 'symboltoken': '513', 'transactiontype': 'BUY', 'exchange': 'NSE', 'ordertype': 'MARKET', 'producttype': 'DELIVERY', 'duration': 'DAY', 'price': '0', 'squareoff': '0', 'stoploss': '0', 'quantity': '1'}
+[E 250413 12:06:31 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/auth/angelbroking/user/v1/loginByPassword. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': '3c:97:0e:8b:18:a0', 'Accept': 'application/json', 'X-PrivateKey': 'VplNyJAX', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'clientcode': 'H53749929', 'password': '1975', 'totp': '598576'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B853784B50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 250413 12:06:31 login:54] Login error: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B853784B50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+        sock = connection.create_connection(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+        raise err
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+        sock.connect(sa)
+    TimeoutError: timed out
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+        response = self._make_request(
+                   ^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+        raise new_e
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+        self._validate_conn(conn)
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+        conn.connect()
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 704, in connect
+        self.sock = sock = self._new_conn()
+                           ^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connection.py", line 207, in _new_conn
+        raise ConnectTimeoutError(
+    urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001B853784B50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)')
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+               ^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+        retries = retries.increment(
+                  ^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B853784B50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\user\projects\angelweb\smartapi\login.py", line 36, in login
+        response = smart_api.generateSession(CLIENT_ID, PASSWORD, totp)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 271, in generateSession
+        loginResultObject=self._postRequest("api.login",params)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\user\projects\angelweb\venv\Lib\site-packages\requests\adapters.py", line 688, in send
+        raise ConnectTimeout(e, request=request)
+    requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B853784B50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 250413 12:06:31 app:105] Trading action failed: Could not get smart_api object via login().
+[E 250413 12:07:22 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/order/v1/placeOrder. Error: The order cannot be processed as the token is categorised under cautionary listings by the exchange.. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/order/v1/placeOrder, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': '3c:97:0e:8b:18:a0', 'Accept': 'application/json', 'X-PrivateKey': 'VplNyJAX', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'variety': 'NORMAL', 'tradingsymbol': 'BOMDYEING-EQ', 'symboltoken': '513', 'transactiontype': 'BUY', 'exchange': 'NSE', 'ordertype': 'LIMIT', 'producttype': 'CARRYFORWARD', 'duration': 'DAY', 'price': '130', 'squareoff': '0', 'stoploss': '0', 'quantity': '1'}, Response: {'message': 'The order cannot be processed as the token is categorised under cautionary listings by the exchange.', 'errorcode': 'AB4036', 'status': False, 'data': None}
+[E 250413 12:07:22 smartConnect:339] API request failed: {'message': 'The order cannot be processed as the token is categorised under cautionary listings by the exchange.', 'errorcode': 'AB4036', 'status': False, 'data': None}
+[E 250413 12:07:22 app:166] Order placement failed. API did not return an Order ID or indicated failure. Params: {'variety': 'NORMAL', 'tradingsymbol': 'BOMDYEING-EQ', 'symboltoken': '513', 'transactiontype': 'BUY', 'exchange': 'NSE', 'ordertype': 'LIMIT', 'producttype': 'CARRYFORWARD', 'duration': 'DAY', 'price': '130', 'squareoff': '0', 'stoploss': '0', 'quantity': '1'}

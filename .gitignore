@@ -1,3 +1,5 @@
 auth_token.json
 .env.trading
 .env.historical
+.env
+venv/
